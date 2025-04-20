@@ -53,3 +53,7 @@ def cube_avg(arr: np.ndarray) -> np.ndarray:
                 sub = arr[i:i+half, j:j+half, k:k+half]
                 means.append(sub.mean())
     return np.array(means)
+
+def echo_array(strings): 
+     for s in strings:
+        subprocess.run(['echo', s], check=True)
