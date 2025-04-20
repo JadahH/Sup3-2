@@ -17,5 +17,5 @@ def print_element(lst):
         time.sleep(1)
 
 
-def cube_avg():
+def cube_avg(arr: np.ndarray) -> np.ndarray:
     pass
