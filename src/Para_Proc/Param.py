@@ -16,7 +16,26 @@ def print_element(lst):
         print(item)
         time.sleep(1)
 
+"""
+    Split a 3D numpy array (cube-shaped) into 8 equally sized chunks by halving each axis,
+    and return the average of each chunk.
 
+    Parameters
+    ----------
+    arr : numpy.ndarray
+        A 3-dimensional, cube-shaped array with even-length sides.
+
+    Returns
+    -------
+    numpy.ndarray
+        A 1D array of length 8 containing the mean of each chunk, in the order
+        determined by iterating over the first, second, then third axis halves.
+
+    Raises
+    ------
+    ValueError
+        If `arr` is not 3D, not cube-shaped, or has odd dimensions.
+    """
 def cube_avg(arr: np.ndarray) -> np.ndarray:
     if arr.ndim != 3:
         raise ValueError("Input must be 3D")
