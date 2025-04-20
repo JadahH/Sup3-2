@@ -54,6 +54,15 @@ def cube_avg(arr: np.ndarray) -> np.ndarray:
                 means.append(sub.mean())
     return np.array(means)
 
+"""
+    Call the system's 'echo' command on each string in the list.
+
+    Parameters
+    ----------
+    strings : list of str
+        The strings to echo via the system shell.
+    """
+
 def echo_array(strings): 
      for s in strings:
         subprocess.run(['echo', s], check=True)
