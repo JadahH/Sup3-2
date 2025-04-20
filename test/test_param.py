@@ -1,3 +1,5 @@
+import numpy as np
+import pytest
 from Para_Proc.Param import cube_avg
 
 def test_2x2x2_cube():
@@ -11,3 +13,9 @@ def test_2x2x2_cube():
 def test_4x4x4_cube():
     arr = np.ones((4,4,4))*5
     assert np.allclose(cube_avg(arr), np.ones(8)*5)
+
+def test_invalid_dimensions():
+    with pytest.raises(ValueError):
+        cube_avg(np.ones((3,3,3)))
+    with pytest.raises(ValueError):
+        cube_avg(np.ones((2,3,2)))
